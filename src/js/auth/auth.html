@@ -2,10 +2,15 @@
   <div class='container page'>
     <div class='row'>
       <div class='col-md-6 offset-md-3 col-xs-12'>
-        <h1 class='text-xs-center'>Register</h1>
+        <h1 class='text-xs-center' ng-bind='::$ctrl.title'></h1>
         <p class='text-xs-center'>
-          <a href=''>
+          <a ui-sref='app.login'
+           ng-show="$ctrl.authType === 'register'">
             Have an account?
+          </a>
+          <a ui-sref='app.register'
+           ng-show="$ctrl.authType === 'login'">
+            Need an account?
           </a>
         </p>
 
@@ -39,7 +44,7 @@
           </fieldset>
         </form>
       </div>
-      
+
     </div>
   </div>
 </div>
