@@ -20,7 +20,7 @@ class AuthCtrl {
       // Callback for failure
       (err) => {
         this.isSubmitted = false;
-        console.log(err.data.errors);
+        this.errors = err.data.errors;
       }
     );
   }
